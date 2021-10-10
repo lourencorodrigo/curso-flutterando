@@ -23,7 +23,32 @@ class HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           // crossAxisAlignment: CrossAxisAlignment.end,
-          children: [Text('Contador: $counter'), CustomSwitch()],
+          children: [
+            Text('Contador: $counter'),
+            Container(
+              height: 10,
+            ),
+            CustomSwitch(),
+            Container(
+              height: 50,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.black,
+                ),
+                Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.red,
+                )
+              ],
+            )
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
