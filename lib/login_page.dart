@@ -25,6 +25,13 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Container(
+                  width: 150,
+                  height: 150,
+                  child: Image.network(
+                      'https://logospng.org/download/spotify/logo-spotify-512.png'),
+                ),
+                Container(height: 16),
                 TextField(
                   onChanged: (text) {
                     email = text;
