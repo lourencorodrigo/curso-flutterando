@@ -28,8 +28,7 @@ class _LoginPageState extends State<LoginPage> {
                 Container(
                   width: 150,
                   height: 150,
-                  child: Image.network(
-                      'https://logospng.org/download/spotify/logo-spotify-512.png'),
+                  child: Image.asset('assets/images/logo.png'),
                 ),
                 Container(height: 16),
                 TextField(
