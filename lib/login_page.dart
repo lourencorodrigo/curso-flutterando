@@ -31,34 +31,53 @@ class _LoginPageState extends State<LoginPage> {
                     child: Image.asset('assets/images/logo.png'),
                   ),
                   Container(height: 16),
-                  TextField(
-                    onChanged: (text) {
-                      email = text;
-                    },
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(), labelText: 'Email'),
+                  Card(
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                          left: 16, right: 16, top: 24, bottom: 16),
+                      child: Column(
+                        children: [
+                          TextField(
+                            onChanged: (text) {
+                              email = text;
+                            },
+                            keyboardType: TextInputType.emailAddress,
+                            decoration: InputDecoration(
+                                border: OutlineInputBorder(),
+                                labelText: 'Email'),
+                          ),
+                          SizedBox(height: 10),
+                          TextField(
+                            onChanged: (text) {
+                              password = text;
+                            },
+                            obscureText: true,
+                            decoration: InputDecoration(
+                                border: OutlineInputBorder(),
+                                labelText: 'Password'),
+                          ),
+                          SizedBox(height: 10),
+                          ElevatedButton(
+                            onPressed: () {
+                              if (email == 'rsilvape@gmail.com' &&
+                                  password == '123') {
+                                Navigator.of(context)
+                                    .pushReplacementNamed('/home');
+                              } else {
+                                print('ERRADO');
+                              }
+                            },
+                            child: Container(
+                                width: double.infinity,
+                                child: Text(
+                                  'ENTRAR',
+                                  textAlign: TextAlign.center,
+                                )),
+                          )
+                        ],
+                      ),
+                    ),
                   ),
-                  SizedBox(height: 10),
-                  TextField(
-                    onChanged: (text) {
-                      password = text;
-                    },
-                    obscureText: true,
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(), labelText: 'Password'),
-                  ),
-                  SizedBox(height: 10),
-                  ElevatedButton(
-                    onPressed: () {
-                      if (email == 'rsilvape@gmail.com' && password == '123') {
-                        Navigator.of(context).pushReplacementNamed('/home');
-                      } else {
-                        print('ERRADO');
-                      }
-                    },
-                    child: Text('ENTRAR'),
-                  )
                 ],
               ),
             ),
