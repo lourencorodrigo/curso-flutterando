@@ -18,8 +18,10 @@ class HomePageState extends State<HomePage> {
         child: Column(
           children: [
             UserAccountsDrawerHeader(
-                currentAccountPicture: Image.network(
-                    'https://media.istockphoto.com/photos/young-beautiful-woman-picture-id1294339577?b=1&k=20&m=1294339577&s=170667a&w=0&h=_5-SM0Dmhb1fhRdz64lOUJMy8oic51GB_2_IPlhCCnU='),
+                currentAccountPicture: ClipOval(
+                  child: Image.network(
+                      'https://i.picsum.photos/id/12/200/200.jpg?hmac=cX-VZ_FED6NC7EKPOnEaNhQEKw6Dy85IfsKItBkkGWA'),
+                ),
                 accountName: Text('Rodrigo'),
                 accountEmail: Text('rsilvape@gmail.com')),
             ListTile(
